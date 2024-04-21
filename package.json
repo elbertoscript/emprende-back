@@ -1,0 +1,8 @@
+{
+  "name": "emprende-full-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "elberto suarez <elbertoisaac@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
