@@ -24,10 +24,10 @@ function requestController(req, res)
     return /// aca se frena la ejecucion despues de responder
  }
 
- if(method === "GET" && url === "/About")
+ if(method === "GET" && url === "/about")
  {
     res.setHeader("Content-type", "text/html; charset=utf-8")
-    fs.readFile('./public/About.html', function(err, file)
+    fs.readFile('./public/about.html', function(err, file)
       {
         if(err)
         {
