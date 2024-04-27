@@ -13,7 +13,7 @@ function requestController(req, res)
 {
  const url = req.url
  const method = req.method
- console.log({ url, method}) 
+ console.log("hola mundo!!!!") 
 
  /*if(method === "GET" && url === "/")
  {
