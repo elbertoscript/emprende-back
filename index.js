@@ -16,7 +16,7 @@ function requestController(req, res)
  if(method === "GET" && url === "/")
  {
   res.setHeader("Content-type", "text/html; charset=utf-8")
-  res.write("<h1>Hola Mundo desde la página principal</h1>")
+  res.write("<h1>Hola Mundo desde la página PRINCIPAL</h1>")
   res.end()
   return
  }
