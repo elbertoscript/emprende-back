@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon public/index.js",
+    "start": "node public/index.js"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
