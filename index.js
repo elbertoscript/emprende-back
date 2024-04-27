@@ -17,16 +17,16 @@ function requestController(req, res)
  {
   res.setHeader("Content-type", "text/html; charset=utf-8")
   res.write("<h1>Hola Mundo desde la página PRINCIPAL</h1>")
-  res.end()
-  return
+  res.end() 
+  return /// aca se frena la ejecucion despues de responder
  }
 
  if(method === "GET" && url === "/about")
  {
   res.setHeader("Content-type", "text/html; charset=utf-8")
   res.write("<h1>Hola Mundo desde la página del about</h1>")
-  res.end()
-  return
+  res.end() 
+  return // aca se frena la ejecucion despues de responder
  }
  res.setHeader("Content-type", "text/html; charset=utf-8")
  res.write("<h1>Página no encontrada...</h1>")
