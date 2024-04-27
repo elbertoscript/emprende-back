@@ -24,10 +24,10 @@ function requestController(req, res)
     return /// aca se frena la ejecucion despues de responder
  }
 
- if(method === "GET" && url === "/about")
+ if(method === "GET" && url === "/About")
  {
     res.setHeader("Content-type", "text/html; charset=utf-8")
-    fs.readFile('./public/index.html', function(err, file)
+    fs.readFile('./public/About.html', function(err, file)
       {
         if(err)
         {
@@ -35,9 +35,10 @@ function requestController(req, res)
         }
         res.write(file)
         res.end()
-        return
+        
       }
     )
+    return
   }
 
   res.setHeader("Content-type", "text/html; charset=utf-8")
