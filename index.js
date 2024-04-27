@@ -7,9 +7,30 @@ const http = require("http")
 
 
 //logica de la función
-function requestController()
+function requestController(req, res)
 {
-  console.log("hola mundo!!!!!!")
+ const url = req.url
+ const method = req.method
+ console.log({ url, method}) 
+
+ if(method === "GET" && url === "/")
+ {
+  res.setHeader("Content-type", "text/html; charset=utf-8")
+  res.write("<h1>Hola Mundo desde la página principal</h1>")
+  res.end()
+  return
+ }
+
+ if(method === "GET" && url === "/about")
+ {
+  res.setHeader("Content-type", "text/html; charset=utf-8")
+  res.write("<h1>Hola Mundo desde la página del about</h1>")
+  res.end()
+  return
+ }
+ res.setHeader("Content-type", "text/html; charset=utf-8")
+ res.write("<h1>Página no encontrada...</h1>")
+ res.end()
 }
 
 
