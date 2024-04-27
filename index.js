@@ -15,16 +15,16 @@ function requestController(req, res)
  const method = req.method
  console.log({ url, method}) 
 
- if(method === "GET" && url === "/")
+ /*if(method === "GET" && url === "/")
  {
     res.setHeader("Content-type", "text/html; charset=utf-8")
-    fs.readFile('./public/index.html')
+    //fs.readFile("./public/index.html")
     res.write("<h1>Hola Mundo desde la página PRINCIPAL</h1>")
     res.end() 
-    return /// aca se frena la ejecucion despues de responder
+    return /// aca se frena la ejecucion despues de responder 
  }
 
- if(method === "GET" && url === "/about")
+ /*if(method === "GET" && url === "/about")
  {
     res.setHeader("Content-type", "text/html; charset=utf-8")
     fs.readFile('./public/about.html', function(err, file)
@@ -44,7 +44,7 @@ function requestController(req, res)
   res.setHeader("Content-type", "text/html; charset=utf-8")
         res.write("<h1>Página no encontrada...</h1>")
         res.end()
-}
+}*/
 
 
 //configurar nuestro servidor
@@ -59,5 +59,4 @@ server.listen(PORT, function()
   
 }
 
-)
-
+)}
