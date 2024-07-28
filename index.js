@@ -20,7 +20,7 @@ function requestController(req, res)
   if(method === "GET" && url === "/about")
     {
       res.setHeader("Content-type", "text/html; charset=utf-8")
-      res.write("<h1>Página Principal </h1>")
+      res.write("<h1>Página Alterna </h1>")
       res.end()
       return
     }
