@@ -1,18 +1,13 @@
-require("dotenv").config()
-const express = require('express')
-const app = express()
-const port = process.env.port
+const http = require("http")
+const name = require("./another")
 
+function requestController()
+{//lógica de la función
+  console.log("Hola Mundo");
+}
 
-//servir archivos estaticos
-app.use(express.static('public'))
+//configurar nuestro servidor
+const server = http.createServer(requestController)
 
-//configurar RUTAS
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
-
-//poner a escuchar la app en un puerto
-app.listen(port, function () {
-  console.log(`Example app listening on port ${port}`)
-})
+server.listen(4000)
+ 
