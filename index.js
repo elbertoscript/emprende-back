@@ -19,9 +19,9 @@ function requestController(req, res)
       }
       res.write(file)
       res.end()
-      
+     
     })
-    return
+    return 
   }
 
   
@@ -41,9 +41,10 @@ function requestController(req, res)
       return
     }
   
-    res.setHeader("Content-type", "text/html; charset=utf-8")
+    res.setHeader("Content-type", "text/html")
     res.write("<h1>Página No Encontrada</h1>")
     res.end()
+    
 }
 
 //configurar nuestro servidor
