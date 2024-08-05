@@ -11,38 +11,31 @@ function requestController(req, res)
   if(method === "GET" && url === "/")
   {
     res.setHeader("Content-type", "text/html")
-    fs.readFile('./Public/index.html', function(err, file)
-    {
-      if(err)
-      {
+    fs.readFile('./Public/index.html', function(err, file){
+      if(err){
         console.log("HUBO UN ERROR");
       }
       res.write(file)
       res.end()
-     
     })
     return 
   }
-
   
-  if(method === "GET" && url === "/About")
-    {
+  if(method === "GET" && url === "/About"){
       res.setHeader("Content-type", "text/html")
-      fs.readFile('./Public/About.html', function(err, file)
-      {
-        if(err)
-        {
-          console.log("HUBO UN ERROR");
+      fs.readFile('./Public/About.html', function(err, file){
+        if(err){
+          console.log(err);
+          return
         }
         res.write(file)
         res.end()
-        
       })
       return
     }
   
     res.setHeader("Content-type", "text/html")
-    res.write("<h1>Página No Encontrada</h1>")
+    res.write("<h1>Página no encontrada 🥲</h1>")
     res.end()
     
 }
