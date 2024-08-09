@@ -4,11 +4,15 @@ const app = express()
 const port = process.env.PORT
 
 //servir archivos estaticos
-app.use(express.static('PUBLIC'))
+app.use(express.static('Public'))
 
-//configurar ruta
+//configurar rutas
 app.get('/', (req, res) => {
   res.send('Hello World!')
+})
+
+app.get('/users', (req, res) => {
+  res.send([{ name: "Elberto"}, { name: "Isacc"}])
 })
 
 
