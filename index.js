@@ -6,7 +6,7 @@ const port = process.env.PORT
 const Schema = mongoose.Schema
 
 mongoose
-.connect(process.env.MONGODBURL).then(() =>{
+.connect(process.env.MONGODB_URL).then(() =>{
   console.log("Conexiòn exitosa con la BBDD!!!")
 })
 .catch((err)=> console.log("Hubo un error al conectarse a la BBDD", { err })
